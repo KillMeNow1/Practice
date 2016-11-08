@@ -1,0 +1,24 @@
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char *argv[])
+{
+
+	int control_var = 0;
+	int stop_condition = 9;
+
+
+
+	printf("Starting a for loop:  \n");
+	for(control_var = 0; control_var < stop_condition; control_var++)
+	{
+		printf("control_var = %d\n", control_var);
+	control_var++;
+	} /* for int_LCV < int_stop_condition */
+	printf("Done with our for loop\n\n");
+
+
+	exit(0);
+}/* main */

@@ -1,0 +1,15 @@
+#include <stdlib.h>
+#include <stdio.h>
+
+/*
+    Program last modified 2012-10-11
+	Simple Hello World program in C
+    These are C comments
+*/
+
+int main(int argc, char *argv[])
+{
+	printf(" Hello World! \n");
+	exit(0);
+}
+

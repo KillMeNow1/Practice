@@ -1,0 +1,44 @@
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
+
+/* Lesson 03 Loops */
+/* This file is CharacterComparison.c */
+
+int main(int argc, char **argv)
+{
+
+	/* Declare variables */
+	char *charArr_1D_stringA = "Badger";
+	char *charArr_1D_stringB = "Cat";
+	char *charArr_1D_stringC = "Goat";
+	int int_stringA_length = (int) strlen(charArr_1D_stringA);
+	int int_stringB_length = (int) strlen(charArr_1D_stringB);
+	int int_stringC_length = (int) strlen(charArr_1D_stringC);
+	int int_i = 0;	
+	int score = 0;	
+
+	printf("A program to score characters in a string\n");
+	printf("charArr_1D_stringA is \"%s\" and is %d characters long\n", charArr_1D_stringA, int_stringA_length);
+
+
+	for(int_i = 0; int_i < int_stringA_length; int_i++)
+	{
+		printf("Comparing %c with %c ",charArr_1D_stringA[int_i], charArr_1D_stringB[int_i]);
+
+		if(charArr_1D_stringA[int_i] != charArr_1D_stringB[int_i])
+		{
+			score = score -1;
+			printf(" Score is now %d \n", score);
+		}
+		else
+		{
+			score++;
+			printf(" Score is now %d .\n", score);
+		}/* if identical */
+			
+	}/* for int_stringA_length */
+
+	exit(0);
+}//main
+

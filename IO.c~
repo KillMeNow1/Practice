@@ -1,0 +1,26 @@
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main (int argc, char *argv [])
+{
+	FILE *fp;
+	char buffer[2048];	// Shouldn't this be over 2048 if just the protein seq is 2048 characters? is name included?
+	
+	if (((fp = fopen("proteins.fasta", "r")) == NULL))
+	{ 
+	 	perror("File does not exist.");
+	return 1;
+	}
+	
+	while(!feof(fp))
+	{
+		if(fgets(buffer, 2048, fp))
+		{
+			if (buffer[0] == '>')
+			printf("%s", buffer);
+		}
+	}
+	fclose(fp);
+return 0;
+}
